@@ -5,12 +5,12 @@ import bodyParser from "body-parser";
 const userRepository = new UserRepo(UserModel);
 const userRouter = express.Router();
 const jsonParser = bodyParser.json();
-userRouter.post('/users/login', jsonParser, (request, response) => {
+userRouter.post('/login', jsonParser, (request, response) => {
     userRepository.findByEmailAndPassword(request.body.email, request.body.password).then((data) => {
         response.json(data);
     });
 });
-userRouter.post('/users/register', jsonParser, (request, response) => {
+userRouter.post('/register', jsonParser, (request, response) => {
     const user = {
         email: request.body.email,
         password: request.body.password

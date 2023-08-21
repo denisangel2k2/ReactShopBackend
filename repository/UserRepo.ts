@@ -9,7 +9,7 @@ export class UserRepo extends Repository<IUser>
     }
 
     public async findByEmailAndPassword(email: string, password: string) {
-        return this.model.find({email: email, password: password},{token: "$_id", _id: 0}).then((result)=>{
+        const return_value=this.model.find({email: email, password: password},{token: "$_id", _id: 0}).then((result)=>{
             return result;
         });
     }

@@ -50,4 +50,9 @@ export class ProductRepo extends Repository {
                 return data;
             });
     }
+    async getProduct(productId) {
+        return this.model.find({ productId: productId }).then((data) => {
+            return data;
+        });
+    }
 }
