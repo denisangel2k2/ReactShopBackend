@@ -1,6 +1,5 @@
-import {IProduct} from "./Product";
 import {model, Schema} from "mongoose";
-interface ICartProduct {
+export interface ICartProduct {
     id: number;
     title: string;
     description: string;

@@ -1,25 +1,76 @@
 import express from "express";
-import { CartRepo } from "../repository/CartRepo.js";
-import CartModel, {ICart} from "../model/Cart.js";
+import {CartServices} from "../services/CartServices.js";
+import CartModel, {ICart, ICartProduct} from "../model/Cart.js";
 import bodyParser from "body-parser";
-const cartRepository = new CartRepo(CartModel);
+import {ProductServices} from "../services/ProductServices.js";
+import ProductModel from "../model/Product.js";
+import UserModel from "../model/User.js";
+import {UserServices} from "../services/UserServices.js";
 
-const jsonParser=bodyParser.json();
+const cartServices = new CartServices(CartModel);
+const productServices = new ProductServices(ProductModel);
+const userServices = new UserServices(UserModel);
+
+const jsonParser = bodyParser.json();
 
 const cartRouter = express.Router();
 
-cartRouter.post('/cart',jsonParser,(request,response)=>{
-    const id : string =request.body.token;
-    const newCart : ICart = {
-        userId: id,
-        total: 0,
-        discountTotal: 0,
-        totalProducts: 0,
-        totalQuantity: 0,
-        products: []
+cartRouter.post("/:cartId", jsonParser, async (req, res) => {
+    const products = req.body.products;
+    const cartId = req.params.cartId;
+    const user = await userServices.findUserFromToken(req.body.token);
+    const userId = user ? user.id : null;
+    if (!userId) {
+        res.status(404).send("Invalid session!");
+    } else {
+        for (let i = 0; i < products.length; i++) {
+            const productId = products[i].id;
+            const productQuantity = products[i].quantity;
+            const product = await productServices.getProduct(productId);
+            if (product) {
+                const cartProduct: ICartProduct = {
+                    id: product.id,
+                    title: product.title,
+                    description: product.description,
+                    price: product.price,
+                    discountedPercentage: product.discountPercentage,
+                    rating: product.rating,
+                    stock: product.stock,
+                    thumbnail: product.thumbnail,
+                    quantity: productQuantity,
+                    total: product.price * productQuantity,
+                    discountedPrice: product.price * productQuantity * (1 - product.discountPercentage / 100)
+                };
+                console.log(cartProduct)
+                cartServices.updateCart(cartProduct, cartId, userId).then((result) => {
+                    res.send(result);
+                })
+                    .catch((err) => {
+                        res.status(500).send(err);
+                    });
+            } else {
+                res.status(404).send("Product not found!");
+            }
+        }
     }
-    cartRepository.saveCart(newCart).then((data)=>{
-        response.json(data);
-    });
+});
+cartRouter.delete("/:cartId", jsonParser, async (req, res) => {
+    const productId = req.body.product_id;
+    const cartId = req.params.cartId;
+    const user = await userServices.findUserFromToken(req.body.token);
+    const userId = user ? user.id : null;
+
+    if (!userId) {
+        res.status(404).send("Invalid session!");
+    } else {
+        const product = await productServices.getProduct(productId);
+        if (product) {
+            cartServices.deleteProductFromCart(productId, cartId, userId).then((result) => {
+                res.status(200).send(result);
+            });
+        } else {
+            res.status(404).send("Product not found!");
+        }
+    }
 });
 export default cartRouter;

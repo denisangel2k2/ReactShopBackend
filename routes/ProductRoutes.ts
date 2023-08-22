@@ -1,13 +1,13 @@
 import express from "express";
-import { ProductRepo } from "../repository/ProductRepo.js";
+import { ProductServices } from "../services/ProductServices.js";
 import ProductModel from "../model/Product.js";
 import bodyParser from "body-parser";
 
 
-const productRepository = new ProductRepo(ProductModel);
+const productRepository = new ProductServices(ProductModel);
 
 const productRouter = express.Router();
-productRouter.get('/products',(request,response)=>{
+productRouter.get('/',(request,response)=>{
     if (request.query.limit || request.query.skip){
         productRepository.findWithLimitAndSkip(Number(request.query.limit),Number(request.query.skip)).then((data)=>{
             response.json(data);
@@ -20,7 +20,7 @@ productRouter.get('/products',(request,response)=>{
     }
 });
 
-productRouter.get('/products/category/:category',(request,response)=>{
+productRouter.get('/category/:category',(request,response)=>{
 
     if (request.query.limit || request.query.skip){
 
@@ -35,7 +35,7 @@ productRouter.get('/products/category/:category',(request,response)=>{
     }
 
 });
-productRouter.get('/products/title/:title',(request,response)=>{
+productRouter.get('/title/:title',(request,response)=>{
     if (request.query.limit || request.query.skip){
         productRepository.findByTitle(request.params.title,Number(request.query.limit),Number(request.query.skip)).then((data)=>{
             response.json(data);

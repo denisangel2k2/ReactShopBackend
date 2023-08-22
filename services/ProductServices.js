@@ -1,5 +1,5 @@
-import { Repository } from "./Repository.js";
-export class ProductRepo extends Repository {
+import { Service } from "./Service.js";
+export class ProductServices extends Service {
     constructor(productModel) {
         super(productModel);
     }
@@ -11,7 +11,10 @@ export class ProductRepo extends Repository {
     async findWithLimitAndSkip(limit, skip = 0, category) {
         if (category) {
             if (limit) {
-                return this.model.find({ category: category }).skip(skip).limit(limit).then((data) => {
+                return this.model.find({ category: category })
+                    .skip(skip)
+                    .limit(limit)
+                    .then((data) => {
                     return data;
                 });
             }
@@ -51,7 +54,7 @@ export class ProductRepo extends Repository {
             });
     }
     async getProduct(productId) {
-        return this.model.find({ productId: productId }).then((data) => {
+        return this.model.findOne({ id: productId }).then((data) => {
             return data;
         });
     }
