@@ -39,4 +39,20 @@ export class CartServices extends Service {
         await this.model.updateOne({ _id: cartId, "userId": userId }, { $pull: { products: { id: productId } } });
         return this.updateCartExtraAttributes(cartId);
     }
+    async getCartUserId(cartId) {
+        return this.model.findOne({ _id: cartId }).then((result) => {
+            if (result)
+                return result.userId;
+            else
+                return null;
+        });
+    }
+    async findById(cartId) {
+        return this.model.findOne({ _id: cartId }).then((result) => {
+            if (result)
+                return result;
+            else
+                return null;
+        });
+    }
 }

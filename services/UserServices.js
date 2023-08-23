@@ -9,7 +9,11 @@ export class UserServices extends Service {
         if (foundUser) {
             foundUser.token = v4();
             await foundUser.save();
-            return foundUser;
+            return {
+                token: foundUser.token,
+                email: foundUser.email,
+                cartId: foundUser.cartId
+            };
         }
     }
     async saveUser(user) {

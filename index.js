@@ -5,14 +5,11 @@ import userRouter from "./routes/UserRoutes.js";
 import cartRouter from "./routes/CartRoutes.js";
 import cors from 'cors';
 await DbConnection("mongodb://localhost:27017/shop");
-const app = express(), port = 2999;
+const app = express(), port = 3001;
+app.use(cors());
 app.use('/products', productRoutes);
 app.use('/', userRouter);
 app.use('/cart', cartRouter);
-app.use(cors({
-    origin: 'http://localhost:3000',
-    credentials: true
-}));
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 });

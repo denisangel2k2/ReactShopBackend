@@ -11,39 +11,85 @@ const productServices = new ProductServices(ProductModel);
 const userServices = new UserServices(UserModel);
 const jsonParser = bodyParser.json();
 const cartRouter = express.Router();
-cartRouter.post("/:cartId", jsonParser, async (req, res) => {
-    const products = req.body.products;
+cartRouter.get("/:cartId", jsonParser, async (req, res) => {
     const cartId = req.params.cartId;
-    const user = await userServices.findUserFromToken(req.body.token);
-    const userId = user ? user.id : null;
-    if (!userId) {
-        res.status(404).send("Invalid session!");
+    try {
+        const user = await userServices.findUserFromToken(req.headers['token']);
+        const userId = user ? user.id : null;
+        const userIdForCart = await cartServices.getCartUserId(cartId);
+        if (!userId || userId !== userIdForCart) {
+            res.status(404).send("Invalid session!");
+        }
+        else {
+            const result = await cartServices.findById(cartId);
+            res.status(200).send(result);
+        }
     }
-    else {
-        for (let i = 0; i < products.length; i++) {
-            const productId = products[i].id;
-            const productQuantity = products[i].quantity;
+    catch (err) {
+        res.status(500).send("Internal server error!");
+    }
+});
+cartRouter.put("/:cartId", jsonParser, async (req, res) => {
+    try {
+        const products = req.body.products;
+        const cartId = req.params.cartId;
+        const user = await userServices.findUserFromToken(req.body.token);
+        const userId = user ? user.id : null;
+        const userIdForCart = await cartServices.getCartUserId(cartId);
+        if (!userId || userId !== userIdForCart) {
+            res.status(404).send("Invalid session!");
+        }
+        else {
+            for (let i = 0; i < products.length; i++) {
+                const productId = products[i].id;
+                const productQuantity = products[i].quantity;
+                const product = await productServices.getProduct(productId);
+                if (product) {
+                    const cartProduct = {
+                        id: product.id,
+                        title: product.title,
+                        description: product.description,
+                        price: product.price,
+                        discountedPercentage: product.discountPercentage,
+                        rating: product.rating,
+                        stock: product.stock,
+                        thumbnail: product.thumbnail,
+                        quantity: productQuantity,
+                        total: product.price * productQuantity,
+                        discountedPrice: product.price * productQuantity * (1 - product.discountPercentage / 100)
+                    };
+                    console.log(cartProduct);
+                    cartServices.updateCart(cartProduct, cartId, userId).then((result) => {
+                        res.send(result);
+                    })
+                        .catch((err) => {
+                        res.status(500).send(err);
+                    });
+                }
+                else {
+                    res.status(404).send("Product not found!");
+                }
+            }
+        }
+    }
+    catch (err) {
+        res.status(500).send("Internal server error!");
+    }
+});
+cartRouter.delete("/:cartId", jsonParser, async (req, res) => {
+    try {
+        const productId = req.body.product_id;
+        const cartId = req.params.cartId;
+        const user = await userServices.findUserFromToken(req.body.token);
+        const userId = user ? user.id : null;
+        if (!userId) {
+            res.status(404).send("Invalid session!");
+        }
+        else {
             const product = await productServices.getProduct(productId);
             if (product) {
-                const cartProduct = {
-                    id: product.id,
-                    title: product.title,
-                    description: product.description,
-                    price: product.price,
-                    discountedPercentage: product.discountPercentage,
-                    rating: product.rating,
-                    stock: product.stock,
-                    thumbnail: product.thumbnail,
-                    quantity: productQuantity,
-                    total: product.price * productQuantity,
-                    discountedPrice: product.price * productQuantity * (1 - product.discountPercentage / 100)
-                };
-                console.log(cartProduct);
-                cartServices.updateCart(cartProduct, cartId, userId).then((result) => {
-                    res.send(result);
-                })
-                    .catch((err) => {
-                    res.status(500).send(err);
+                cartServices.deleteProductFromCart(productId, cartId, userId).then((result) => {
+                    res.status(200).send(result);
                 });
             }
             else {
@@ -51,25 +97,8 @@ cartRouter.post("/:cartId", jsonParser, async (req, res) => {
             }
         }
     }
-});
-cartRouter.delete("/:cartId", jsonParser, async (req, res) => {
-    const productId = req.body.product_id;
-    const cartId = req.params.cartId;
-    const user = await userServices.findUserFromToken(req.body.token);
-    const userId = user ? user.id : null;
-    if (!userId) {
-        res.status(404).send("Invalid session!");
-    }
-    else {
-        const product = await productServices.getProduct(productId);
-        if (product) {
-            cartServices.deleteProductFromCart(productId, cartId, userId).then((result) => {
-                res.status(200).send(result);
-            });
-        }
-        else {
-            res.status(404).send("Product not found!");
-        }
+    catch (err) {
+        res.status(500).send("Internal server error!");
     }
 });
 export default cartRouter;

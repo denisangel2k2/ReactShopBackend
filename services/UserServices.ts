@@ -1,7 +1,6 @@
 import {Service} from "./Service.js";
 import {IUser} from "../model/User.js";
 import {Model} from "mongoose";
-import {uuid} from "uuidv4";
 import {v4} from "uuid";
 
 export class UserServices extends Service<IUser>
@@ -12,10 +11,16 @@ export class UserServices extends Service<IUser>
 
     public async login(email: string, password: string) {
         let foundUser=await this.model.findOne({email: email, password: password});
+
         if(foundUser){
             foundUser.token=v4();
             await foundUser.save();
-            return foundUser;
+
+            return {
+                token: foundUser.token,
+                email: foundUser.email,
+                cartId: foundUser.cartId
+            };
         }
     }
 
