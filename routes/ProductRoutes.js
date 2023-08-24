@@ -7,7 +7,7 @@ productRouter.get('/', async (request, response) => {
     try {
         const limit = Number(request.query.limit);
         const skip = Number(request.query.skip);
-        if ((isNaN(limit) && isNaN(skip)) || limit < 1 || skip < 0) {
+        if (limit < 1 || skip < 0) {
             return response.status(400).send("Bad request");
         }
         let data;
@@ -66,10 +66,31 @@ productRouter.get('/title/:title', async (request, response) => {
         response.status(500).send("Internal server error");
     }
 });
+productRouter.get('/number', async (request, response) => {
+    try {
+        const data = await productRepository.getNumberOfProducts('');
+        response.json(data);
+    }
+    catch (error) {
+        console.log("Error:", error);
+        response.status(500).send("Internal server error!!!!");
+    }
+});
 productRouter.get('/:productId', async (request, response) => {
     try {
         const productId = request.params.productId;
         const data = await productRepository.getProduct(productId);
+        response.json(data);
+    }
+    catch (error) {
+        console.error("Error:", error);
+        response.status(500).send("Internal server error");
+    }
+});
+productRouter.get('/category/:category/number', async (request, response) => {
+    try {
+        const category = request.params.category;
+        const data = await productRepository.getNumberOfProducts(category);
         response.json(data);
     }
     catch (error) {

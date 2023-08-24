@@ -75,6 +75,15 @@ productRouter.get('/title/:title', async (request, response) => {
         response.status(500).send("Internal server error");
     }
 });
+productRouter.get('/number', async (request, response) => {
+    try {
+        const data = await productRepository.getNumberOfProducts('');
+        response.json(data);
+    } catch (error) {
+        console.log("Error:", error);
+        response.status(500).send("Internal server error!!!!");
+    }
+});
 productRouter.get('/:productId', async (request, response) => {
     try {
         const productId = request.params.productId;
@@ -85,4 +94,15 @@ productRouter.get('/:productId', async (request, response) => {
         response.status(500).send("Internal server error");
     }
 });
+productRouter.get('/category/:category/number', async (request, response) => {
+    try {
+        const category = request.params.category;
+        const data = await productRepository.getNumberOfProducts(category);
+        response.json(data);
+    } catch (error) {
+        console.error("Error:", error);
+        response.status(500).send("Internal server error");
+    }
+});
+
 export default productRouter;

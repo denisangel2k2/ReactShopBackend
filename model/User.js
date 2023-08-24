@@ -5,5 +5,5 @@ const userSchema = new Schema({
     password: String,
     cartId: String
 });
-const userModel = model("users", userSchema);
-export default userModel;
+const UserModel = model("users", userSchema);
+export default UserModel;

@@ -26,7 +26,28 @@ export class CartServices extends Service<ICart> {
                 });
                 cart.totalProducts = cart.products.length;
                 cart.save();
-                return cart;
+                return {
+                    userId: cart.userId,
+                    total: cart.total,
+                    totalQuantity: cart.totalQuantity,
+                    discountTotal: cart.discountTotal,
+                    totalProducts: cart.totalProducts,
+                    products: cart.products.map((product) => {
+                        return {
+                            id: product.id,
+                            title: product.title,
+                            description: product.description,
+                            price: product.price,
+                            discountedPercentage: product.discountedPercentage,
+                            rating: product.rating,
+                            stock: product.stock,
+                            thumbnail: product.thumbnail,
+                            quantity: product.quantity,
+                            total: product.total,
+                            discountedPrice: product.discountedPrice
+                        };
+                    })
+                };
             }
         });
 
@@ -35,28 +56,64 @@ export class CartServices extends Service<ICart> {
     public async updateCart(product: ICartProduct, cartId: string, userId: string) {
         const foundCart = await this.model.findOne({_id: cartId, "products.id": product.id});
         if (foundCart) {
-            await this.model.updateOne({_id: cartId, "products.id": product.id, "userId": userId}, {$inc: {"products.$.quantity": product.quantity}});
+            await this.model.updateOne({
+                _id: cartId,
+                "products.id": product.id,
+                "userId": userId
+            }, {$inc: {"products.$.quantity": product.quantity}});
         } else {
             await this.model.updateOne({_id: cartId, "userId": userId}, {$push: {products: product}});
         }
         return this.updateCartExtraAttributes(cartId);
     }
-    public async deleteProductFromCart(productId: string, cartId: string, userId: string){
+
+    public async deleteProductFromCart(productId: string, cartId: string, userId: string) {
         await this.model.updateOne({_id: cartId, "userId": userId}, {$pull: {products: {id: productId}}});
         return this.updateCartExtraAttributes(cartId);
     }
-    public async getCartUserId(cartId: string){
-        return this.model.findOne({_id: cartId}).then((result)=>{
+
+    public async getCartUserId(cartId: string) {
+        return this.model.findOne({_id: cartId}).then((result) => {
             if (result)
                 return result.userId;
             else return null;
         });
     }
-    public async findById(cartId: string){
-        return this.model.findOne({_id: cartId}).then((result)=>{
-            if (result)
+
+    public async findByUserId(userId: string) {
+        return this.model.findOne({userId: userId}).then((result) => {
+            if (result) {
                 return result;
+            }
             else return null;
+        });
+    }
+    public async findById(cartId: string) {
+        return this.model.findOne({_id: cartId}).then((result) => {
+            if (result) {
+                return {
+                    userId: result.userId,
+                    total: result.total,
+                    totalQuantity: result.totalQuantity,
+                    discountTotal: result.discountTotal,
+                    totalProducts: result.totalProducts,
+                    products: result.products.map((product) => {
+                        return {
+                            id: product.id,
+                            title: product.title,
+                            description: product.description,
+                            price: product.price,
+                            discountedPercentage: product.discountedPercentage,
+                            rating: product.rating,
+                            stock: product.stock,
+                            thumbnail: product.thumbnail,
+                            quantity: product.quantity,
+                            total: product.total,
+                            discountedPrice: product.discountedPrice
+                        };
+                    })
+                };
+            } else return null;
         });
     }
 }

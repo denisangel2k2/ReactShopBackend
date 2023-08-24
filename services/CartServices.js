@@ -21,14 +21,39 @@ export class CartServices extends Service {
                 });
                 cart.totalProducts = cart.products.length;
                 cart.save();
-                return cart;
+                return {
+                    userId: cart.userId,
+                    total: cart.total,
+                    totalQuantity: cart.totalQuantity,
+                    discountTotal: cart.discountTotal,
+                    totalProducts: cart.totalProducts,
+                    products: cart.products.map((product) => {
+                        return {
+                            id: product.id,
+                            title: product.title,
+                            description: product.description,
+                            price: product.price,
+                            discountedPercentage: product.discountedPercentage,
+                            rating: product.rating,
+                            stock: product.stock,
+                            thumbnail: product.thumbnail,
+                            quantity: product.quantity,
+                            total: product.total,
+                            discountedPrice: product.discountedPrice
+                        };
+                    })
+                };
             }
         });
     }
     async updateCart(product, cartId, userId) {
         const foundCart = await this.model.findOne({ _id: cartId, "products.id": product.id });
         if (foundCart) {
-            await this.model.updateOne({ _id: cartId, "products.id": product.id, "userId": userId }, { $inc: { "products.$.quantity": product.quantity } });
+            await this.model.updateOne({
+                _id: cartId,
+                "products.id": product.id,
+                "userId": userId
+            }, { $inc: { "products.$.quantity": product.quantity } });
         }
         else {
             await this.model.updateOne({ _id: cartId, "userId": userId }, { $push: { products: product } });
@@ -47,10 +72,41 @@ export class CartServices extends Service {
                 return null;
         });
     }
+    async findByUserId(userId) {
+        return this.model.findOne({ userId: userId }).then((result) => {
+            if (result) {
+                return result;
+            }
+            else
+                return null;
+        });
+    }
     async findById(cartId) {
         return this.model.findOne({ _id: cartId }).then((result) => {
-            if (result)
-                return result;
+            if (result) {
+                return {
+                    userId: result.userId,
+                    total: result.total,
+                    totalQuantity: result.totalQuantity,
+                    discountTotal: result.discountTotal,
+                    totalProducts: result.totalProducts,
+                    products: result.products.map((product) => {
+                        return {
+                            id: product.id,
+                            title: product.title,
+                            description: product.description,
+                            price: product.price,
+                            discountedPercentage: product.discountedPercentage,
+                            rating: product.rating,
+                            stock: product.stock,
+                            thumbnail: product.thumbnail,
+                            quantity: product.quantity,
+                            total: product.total,
+                            discountedPrice: product.discountedPrice
+                        };
+                    })
+                };
+            }
             else
                 return null;
         });

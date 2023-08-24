@@ -58,4 +58,16 @@ export class ProductServices extends Service {
             return data;
         });
     }
+    async getNumberOfProducts(category) {
+        if (category) {
+            return this.model.countDocuments({ category: category }).then((data) => {
+                return data;
+            });
+        }
+        else {
+            return this.model.countDocuments({}).then((data) => {
+                return data;
+            });
+        }
+    }
 }

@@ -4,6 +4,7 @@ import {DbConnection} from "./database/dbutils.js";
 import userRouter from "./routes/UserRoutes.js";
 import cartRouter from "./routes/CartRoutes.js";
 import cors from 'cors';
+import orderRouter from "./routes/OrderRoutes.js";
 
 await DbConnection("mongodb://localhost:27017/shop");
 
@@ -13,7 +14,7 @@ app.use(cors());
 app.use('/products',productRoutes);
 app.use('/',userRouter);
 app.use('/cart',cartRouter);
-
+app.use('/orders',orderRouter);
 
 
 app.listen(port,()=>{

@@ -62,6 +62,19 @@ export class ProductServices extends Service<IProduct> {
         });
     }
 
+    public async getNumberOfProducts(category? : string){
+        if(category){
+            return this.model.countDocuments({category: category}).then((data)=>{
+                return data;
+            });
+        }
+        else{
+            return this.model.countDocuments({}).then((data)=>{
+                return data;
+            });
+        }
+    }
+
 
 
 }

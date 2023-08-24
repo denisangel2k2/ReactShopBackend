@@ -20,29 +20,35 @@ userRouter.post('/login', jsonParser, (request, response) => {
 });
 
 userRouter.post('/register', jsonParser, (request, response) => {
-    const newToken: string = uuid();
-    const user: IUser = {
-        token: newToken,
-        email: request.body.email,
-        password: request.body.password,
-        cartId: ''
-    };
-    userServices.saveUser(user).then(async (data) => {
-        console.log(data._id);
-        const newCart : ICart = {
-            userId: String(data._id),
-            total: 0,
-            discountTotal: 0,
-            totalProducts: 0,
-            totalQuantity: 0,
-            products: []
-        }
-        cartServices.saveCart(newCart).then(async (cart_data)=>{
-            await userServices.updateCartIdForUser(String(cart_data._id),String(data._id));
+    try{
+        const newToken: string = uuid();
+        const user: IUser = {
+            token: newToken,
+            email: request.body.email,
+            password: request.body.password,
+            cartId: ''
+        };
+        userServices.saveUser(user).then(async (data) => {
+            console.log(data._id);
+            const newCart : ICart = {
+                userId: String(data._id),
+                total: 0,
+                discountTotal: 0,
+                totalProducts: 0,
+                totalQuantity: 0,
+                products: []
+            }
+            cartServices.saveCart(newCart).then(async (cart_data)=>{
+                await userServices.updateCartIdForUser(String(cart_data._id),String(data._id));
 
+            });
+            response.status(200).json(data);
         });
-        response.status(200).json(data);
-    });
+    }
+    catch (err) {
+        response.status(500).send("Internal server error!");
+    }
+
 });
 
 export default userRouter;
