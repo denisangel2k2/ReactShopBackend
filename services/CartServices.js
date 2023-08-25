@@ -81,6 +81,10 @@ export class CartServices extends Service {
                 return null;
         });
     }
+    async deleteAllProductsFromCart(cartId) {
+        await this.model.updateOne({ _id: cartId }, { products: [] });
+        return this.updateCartExtraAttributes(cartId);
+    }
     async findById(cartId) {
         return this.model.findOne({ _id: cartId }).then((result) => {
             if (result) {

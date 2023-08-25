@@ -12,13 +12,25 @@ const cartServices = new CartServices(CartModel);
 const userRouter = express.Router();
 const jsonParser = bodyParser.json();
 
-
+/**
+ * Route to login a user
+ * @body email - user email
+ * @body password - user password
+ * @returns value - {token, email, cartId}
+ *
+ */
 userRouter.post('/login', jsonParser, (request, response) => {
     userServices.login(request.body.email, request.body.password).then((data) => {
         response.json(data);
     });
 });
 
+/**
+ * Route to register a user
+ * @body email - user email
+ * @body password - user password
+ * @returns response - user data
+ */
 userRouter.post('/register', jsonParser, (request, response) => {
     try{
         const newToken: string = uuid();

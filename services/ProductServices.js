@@ -58,6 +58,11 @@ export class ProductServices extends Service {
             return data;
         });
     }
+    async getNumberOfProductsTitle(title) {
+        return this.model.countDocuments({ title: new RegExp(title, "i") }).then((data) => {
+            return data;
+        });
+    }
     async getNumberOfProducts(category) {
         if (category) {
             return this.model.countDocuments({ category: category }).then((data) => {

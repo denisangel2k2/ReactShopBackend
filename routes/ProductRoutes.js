@@ -47,6 +47,16 @@ productRouter.get('/category/:category', async (request, response) => {
         response.status(500).send("Internal server error");
     }
 });
+productRouter.get('/title/:title/number', async (request, response) => {
+    try {
+        const data = await productRepository.getNumberOfProductsTitle(request.params.title);
+        response.json(data);
+    }
+    catch (error) {
+        console.error("Error:", error);
+        response.status(500).send("Internal server error");
+    }
+});
 productRouter.get('/title/:title', async (request, response) => {
     try {
         const limit = Number(request.query.limit);

@@ -1,8 +1,11 @@
 import { model, Schema } from "mongoose";
 const orderSchema = new Schema({
     userId: String,
+    firstName: String,
+    lastName: String,
     address: String,
     phone: String,
+    date: String,
     cart: {
         total: Number,
         discountTotal: Number,

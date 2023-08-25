@@ -80,6 +80,7 @@ export class CartServices extends Service<ICart> {
         });
     }
 
+
     public async findByUserId(userId: string) {
         return this.model.findOne({userId: userId}).then((result) => {
             if (result) {
@@ -87,6 +88,11 @@ export class CartServices extends Service<ICart> {
             }
             else return null;
         });
+    }
+    public async deleteAllProductsFromCart(cartId: string) {
+        await this.model.updateOne({_id: cartId}, {products: []});
+        return this.updateCartExtraAttributes(cartId);
+
     }
     public async findById(cartId: string) {
         return this.model.findOne({_id: cartId}).then((result) => {
