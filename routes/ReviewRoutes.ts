@@ -11,8 +11,16 @@ const reviewServices = new ReviewServices(ReviewModel),
     reviewRouter = express.Router(),
     jsonParser = bodyParser.json();
 
+/**
+ * Route serving all reviews.
+ */
 reviewRouter.post('/add', jsonParser, async (request, response) => {
-    const user = await userServices.findUserFromToken(request.headers['token'] as string),
+    const token: string = request.headers['token'] as string;
+    if (token === "") {
+        response.status(404).send("Invalid session!");
+        return;
+    }
+    const user = await userServices.findUserFromToken(token as string),
         userId = user ? user._id : null;
 
     if (!userId) {
@@ -31,8 +39,16 @@ reviewRouter.post('/add', jsonParser, async (request, response) => {
     }
 });
 
+/**
+ * Route that deletes a review by reviewId.
+ */
 reviewRouter.delete('/delete/:reviewId', async (request, response) => {
-    const user = await userServices.findUserFromToken(request.headers['token'] as string),
+    const token: string = request.headers['token'] as string;
+    if (token === "") {
+        response.status(404).send("Invalid session!");
+        return;
+    }
+    const user = await userServices.findUserFromToken(token as string),
         userId = user ? user.id : null;
 
     if (!userId) {
@@ -51,6 +67,9 @@ reviewRouter.delete('/delete/:reviewId', async (request, response) => {
     }
 });
 
+/**
+ * Route that gets all reviews by userId.
+ */
 reviewRouter.get('/user/:userId', async (request, response) => {
     try {
         const userId = request.params.userId;
@@ -62,7 +81,9 @@ reviewRouter.get('/user/:userId', async (request, response) => {
         response.status(500).send("Internal server error");
     }
 });
-
+/**
+ * Route that gets all reviews by productId.
+ */
 reviewRouter.get('/product/:productId', async (request, response) => {
     try {
         const productId = request.params.productId;

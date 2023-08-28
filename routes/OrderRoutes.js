@@ -40,6 +40,10 @@ orderRouter.post('/', jsonParser, async (req, res) => {
     try {
         const token = req.headers['token'];
         const { phone, address, firstName, lastName } = req.body;
+        if (token === "") {
+            res.status(404).send("Invalid session!");
+            return;
+        }
         const user = await userServices.findUserFromToken(token);
         if (user) {
             let order;
@@ -82,7 +86,12 @@ orderRouter.post('/', jsonParser, async (req, res) => {
  */
 orderRouter.get('/', jsonParser, async (req, res) => {
     try {
-        const token = req.headers['token'], user = await userServices.findUserFromToken(token);
+        const token = req.headers['token'];
+        if (token === "") {
+            res.status(404).send("Invalid session!");
+            return;
+        }
+        const user = await userServices.findUserFromToken(token);
         if (user) {
             orderServices.findOrdersByUserId(user.id).then((result) => {
                 res.status(200).send(result);

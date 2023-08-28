@@ -62,6 +62,11 @@ export class UserServices extends Service<IUser>
         });
     }
 
+    /**
+     * Logout user, sets the token of a user to ''
+     * @param token - string
+     * @returns {Promise<*>}
+     */
     public async logout(token: string){
         return this.model.updateOne({token: token},{token: ''}).then((result)=>{
             return result;

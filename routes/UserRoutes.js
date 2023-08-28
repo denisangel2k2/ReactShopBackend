@@ -56,6 +56,11 @@ userRouter.post('/register', jsonParser, (request, response) => {
         response.status(500).send("Internal server error!");
     }
 });
+/**
+ * Route to logout a user
+ * @body token - user token
+ * @returns response - user data
+ */
 userRouter.post('/logout', jsonParser, (request, response) => {
     userServices.logout(request.headers.token).then((data) => {
         response.json(data);

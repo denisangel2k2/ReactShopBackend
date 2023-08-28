@@ -17,7 +17,12 @@ const cartRouter = express.Router();
 cartRouter.get("/:cartId", jsonParser, async (req, res) => {
     const cartId = req.params.cartId;
     try {
-        const user = await userServices.findUserFromToken(req.headers['token']), userId = user ? user.id : null, userIdForCart = await cartServices.getCartUserId(cartId);
+        const token = req.headers['token'];
+        if (token === "") {
+            res.status(404).send("Invalid session!");
+            return;
+        }
+        const user = await userServices.findUserFromToken(token), userId = user ? user.id : null, userIdForCart = await cartServices.getCartUserId(cartId);
         if (!userId || userId !== userIdForCart) {
             res.status(404).send("Invalid session!");
         }
@@ -39,16 +44,19 @@ cartRouter.get("/:cartId", jsonParser, async (req, res) => {
  */
 cartRouter.put("/:cartId", jsonParser, async (req, res) => {
     try {
-        const products = req.body.products, cartId = req.params.cartId, user = await userServices.findUserFromToken(req.headers.token), userId = user ? user.id : null, userIdForCart = await cartServices.getCartUserId(cartId);
+        const products = req.body.products, cartId = req.params.cartId, token = req.headers['token'];
+        if (token === "") {
+            res.status(404).send("Invalid session!");
+            return;
+        }
+        const user = await userServices.findUserFromToken(token), userId = user ? user.id : null, userIdForCart = await cartServices.getCartUserId(cartId);
         if (!userId || userId !== userIdForCart) {
             res.status(404).send("Invalid session!");
             return;
         }
         else {
             for (let i = 0; i < products.length; i++) {
-                const productId = products[i].id;
-                const productQuantity = products[i].quantity;
-                const product = await productServices.getProduct(productId);
+                const productId = products[i].id, productQuantity = products[i].quantity, product = await productServices.getProduct(productId);
                 if (product) {
                     const cartProduct = {
                         id: product.id,
@@ -90,9 +98,12 @@ cartRouter.put("/:cartId", jsonParser, async (req, res) => {
  */
 cartRouter.delete("/:cartId", jsonParser, async (req, res) => {
     try {
-        const productId = req.body.product_id;
-        const cartId = req.params.cartId;
-        const user = await userServices.findUserFromToken(req.headers['token']);
+        const productId = req.body.product_id, cartId = req.params.cartId, token = req.headers['token'];
+        if (token === "") {
+            res.status(404).send("Invalid session!");
+            return;
+        }
+        const user = await userServices.findUserFromToken(token);
         const userId = user ? user.id : null;
         if (!userId) {
             res.status(404).send("Invalid session!");

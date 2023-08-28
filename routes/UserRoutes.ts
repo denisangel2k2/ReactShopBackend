@@ -62,7 +62,11 @@ userRouter.post('/register', jsonParser, (request, response) => {
     }
 
 });
-
+/**
+ * Route to logout a user
+ * @body token - user token
+ * @returns response - user data
+ */
 userRouter.post('/logout', jsonParser, (request, response) => {
     userServices.logout(request.headers.token as string).then((data) => {
         response.json(data);
