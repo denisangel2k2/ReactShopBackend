@@ -1,14 +1,25 @@
 import express from "express";
+import bodyParser from "body-parser";
 import ReviewModel from "../model/Review.js";
 import {ReviewServices} from "../services/ReviewServices.js";
-import bodyParser from "body-parser";
+import {UserServices} from "../services/UserServices.js";
+import UserModel from "../model/User.js";
 
 
 const reviewServices = new ReviewServices(ReviewModel),
+    userServices = new UserServices(UserModel),
     reviewRouter = express.Router(),
     jsonParser = bodyParser.json();
 
 reviewRouter.post('/add', jsonParser, async (request, response) => {
+    const user = await userServices.findUserFromToken(request.headers['token'] as string),
+        userId = user ? user._id : null;
+
+    if (!userId) {
+        response.status(404).send("Invalid session!");
+        return;
+    }
+
     try {
         const review = request.body;
         const data = await reviewServices.addReview(review);
@@ -21,6 +32,14 @@ reviewRouter.post('/add', jsonParser, async (request, response) => {
 });
 
 reviewRouter.delete('/delete/:reviewId', async (request, response) => {
+    const user = await userServices.findUserFromToken(request.headers['token'] as string),
+        userId = user ? user.id : null;
+
+    if (!userId) {
+        response.status(404).send("Invalid session!");
+        return;
+    }
+
     try {
         const reviewId = request.params.reviewId;
         const data = await reviewServices.deleteReview(reviewId);
