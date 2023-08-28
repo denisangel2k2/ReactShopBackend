@@ -6,7 +6,7 @@ import userRouter from "./routes/UserRoutes.js";
 import cartRouter from "./routes/CartRoutes.js";
 import orderRouter from "./routes/OrderRoutes.js";
 import reviewRouter from "./routes/ReviewRoutes.js";
-await DbConnection("mongodb://localhost:27017/DenisShop");
+await DbConnection("mongodb://localhost:27017/shop");
 const app = express(), port = 3001;
 app.use(cors());
 app.use('/products', productRoutes);

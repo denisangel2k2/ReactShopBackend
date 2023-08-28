@@ -53,6 +53,7 @@ cartRouter.put("/:cartId", jsonParser, async (req, res) => {
 
         if (!userId || userId !== userIdForCart) {
             res.status(404).send("Invalid session!");
+            return;
         } else {
             for (let i = 0; i < products.length; i++) {
                 const productId = products[i].id;
