@@ -62,6 +62,12 @@ export class UserServices extends Service<IUser>
         });
     }
 
+    public async logout(token: string){
+        return this.model.updateOne({token: token},{token: ''}).then((result)=>{
+            return result;
+        });
+    };
+
 
 
 }

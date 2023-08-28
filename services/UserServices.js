@@ -51,4 +51,10 @@ export class UserServices extends Service {
             return result;
         });
     }
+    async logout(token) {
+        return this.model.updateOne({ token: token }, { token: '' }).then((result) => {
+            return result;
+        });
+    }
+    ;
 }

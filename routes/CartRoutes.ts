@@ -47,7 +47,7 @@ cartRouter.put("/:cartId", jsonParser, async (req, res) => {
     try{
         const products = req.body.products,
         cartId = req.params.cartId,
-        user = await userServices.findUserFromToken(req.body.token),
+        user = await userServices.findUserFromToken(req.headers.token as string),
         userId = user ? user.id : null,
         userIdForCart = await cartServices.getCartUserId(cartId);
 
@@ -102,7 +102,7 @@ cartRouter.delete("/:cartId", jsonParser, async (req, res) => {
     try{
         const productId = req.body.product_id;
         const cartId = req.params.cartId;
-        const user = await userServices.findUserFromToken(req.body.token);
+        const user = await userServices.findUserFromToken(req.headers['token'] as string);
         const userId = user ? user.id : null;
 
         if (!userId) {

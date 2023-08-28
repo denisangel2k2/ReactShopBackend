@@ -63,4 +63,10 @@ userRouter.post('/register', jsonParser, (request, response) => {
 
 });
 
+userRouter.post('/logout', jsonParser, (request, response) => {
+    userServices.logout(request.headers.token as string).then((data) => {
+        response.json(data);
+    });
+});
+
 export default userRouter;

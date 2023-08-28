@@ -45,7 +45,8 @@ function formatDateToCustomString(date: Date) {
  */
 orderRouter.post('/', jsonParser, async (req, res) => {
     try {
-        const {token, phone, address, firstName, lastName} = req.body;
+        const token= req.headers['token'] as string;
+        const {phone, address, firstName, lastName} = req.body;
 
         const user = await userServices.findUserFromToken(token);
         if (user) {
