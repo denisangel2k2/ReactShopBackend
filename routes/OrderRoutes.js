@@ -11,6 +11,10 @@ const cartServices = new CartServices(CartModel);
 const userServices = new UserServices(UserModel);
 const jsonParser = bodyParser.json();
 const orderRouter = Router();
+/**
+ * Format date to custom string
+ * @param date - date to format
+ */
 function formatDateToCustomString(date) {
     const day = String(date.getDate()).padStart(2, '0');
     const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -19,6 +23,19 @@ function formatDateToCustomString(date) {
     const minutes = String(date.getMinutes()).padStart(2, '0');
     return `${day}/${month}/${year} ${hours}:${minutes}`;
 }
+/**
+ * Create a new order for a user and clear the cart
+ * @header token - user token
+ * @body phone - user phone
+ * @body address - user address
+ * @body firstName - user first name
+ * @body lastName - user last name
+ * @return 200 - order created
+ * @return 400 - cart is empty
+ * @return 404 - cart not found
+ * @return 404 - user not found
+ * @return 500 - internal server error
+ */
 orderRouter.post('/', jsonParser, async (req, res) => {
     try {
         const { token, phone, address, firstName, lastName } = req.body;
@@ -39,7 +56,6 @@ orderRouter.post('/', jsonParser, async (req, res) => {
                 if (cart.totalProducts === 0)
                     return res.status(400).send("Cart is empty!");
                 orderServices.saveOrder(order).then((result) => {
-                    //TODO: delete all products from cart
                     console.log(String(cart._id));
                     cartServices.deleteAllProductsFromCart(String(cart._id)).then((result) => {
                         res.status(200).send(result);
@@ -56,6 +72,13 @@ orderRouter.post('/', jsonParser, async (req, res) => {
         res.status(500).send("Internal server error!");
     }
 });
+/**
+ * Get all orders for a user
+ * @header token - user token
+ * @return 200 - orders found
+ * @return 404 - user not found
+ * @return 500 - internal server error
+ */
 orderRouter.get('/', jsonParser, async (req, res) => {
     try {
         const token = req.headers['token'], user = await userServices.findUserFromToken(token);

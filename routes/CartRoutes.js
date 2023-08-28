@@ -11,6 +11,9 @@ const productServices = new ProductServices(ProductModel);
 const userServices = new UserServices(UserModel);
 const jsonParser = bodyParser.json();
 const cartRouter = express.Router();
+/**
+ * Route to get the cart of a user by cart id
+ */
 cartRouter.get("/:cartId", jsonParser, async (req, res) => {
     const cartId = req.params.cartId;
     try {
@@ -27,6 +30,13 @@ cartRouter.get("/:cartId", jsonParser, async (req, res) => {
         res.status(500).send("Internal server error!");
     }
 });
+/**
+ * Route to update the cart of a user by cart id
+ * @param cartId
+ * @body products
+ * @body token
+ * @returns updated cart
+ */
 cartRouter.put("/:cartId", jsonParser, async (req, res) => {
     try {
         const products = req.body.products, cartId = req.params.cartId, user = await userServices.findUserFromToken(req.body.token), userId = user ? user.id : null, userIdForCart = await cartServices.getCartUserId(cartId);
@@ -70,6 +80,13 @@ cartRouter.put("/:cartId", jsonParser, async (req, res) => {
         res.status(500).send("Internal server error!");
     }
 });
+/**
+ * Route to delete a product from the cart of a user by cart id
+ * @param cartId
+ * @body products
+ * @body token
+ * @returns updated cart
+ */
 cartRouter.delete("/:cartId", jsonParser, async (req, res) => {
     try {
         const productId = req.body.product_id;
