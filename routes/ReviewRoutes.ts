@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import ReviewModel from "../model/Review.js";
+import ReviewModel, {IReview} from "../model/Review.js";
 import {ReviewServices} from "../services/ReviewServices.js";
 import {UserServices} from "../services/UserServices.js";
 import UserModel from "../model/User.js";
@@ -17,19 +17,32 @@ const reviewServices = new ReviewServices(ReviewModel),
 reviewRouter.post('/add', jsonParser, async (request, response) => {
     const token: string = request.headers['token'] as string;
     if (token === "") {
+        console.log('1',token);
         response.status(404).send("Invalid session!");
         return;
     }
+    console.log(token);
     const user = await userServices.findUserFromToken(token as string),
-        userId = user ? user._id : null;
+        user_id = user ? user._id : null;
 
-    if (!userId) {
+    if (!user_id) {
+        console.log('2', user_id);
         response.status(404).send("Invalid session!");
         return;
     }
 
+    else{
+
+    }
     try {
-        const review = request.body;
+        // const review = request.body;
+        const review: IReview = {
+            productId: request.body.productId,
+            userId: String(user_id),
+            rating: request.body.rating,
+            comment: request.body.comment,
+            title: request.body.title
+        }
         const data = await reviewServices.addReview(review);
         response.header('Access-Control-Allow-Origin', 'http://localhost:3000');
         response.status(200).json(data);
