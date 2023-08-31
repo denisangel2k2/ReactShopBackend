@@ -17,22 +17,15 @@ const reviewServices = new ReviewServices(ReviewModel),
 reviewRouter.post('/add', jsonParser, async (request, response) => {
     const token: string = request.headers['token'] as string;
     if (token === "") {
-        console.log('1',token);
         response.status(404).send("Invalid session!");
         return;
     }
-    console.log(token);
     const user = await userServices.findUserFromToken(token as string),
         user_id = user ? user._id : null;
 
     if (!user_id) {
-        console.log('2', user_id);
         response.status(404).send("Invalid session!");
         return;
-    }
-
-    else{
-
     }
     try {
         // const review = request.body;
@@ -42,6 +35,10 @@ reviewRouter.post('/add', jsonParser, async (request, response) => {
             rating: request.body.rating,
             comment: request.body.comment,
             title: request.body.title
+        }
+        if (review.rating < 1 || review.rating > 5) {
+            response.status(400).send("Invalid rating!");
+            return;
         }
         const data = await reviewServices.addReview(review);
         response.header('Access-Control-Allow-Origin', 'http://localhost:3000');

@@ -118,6 +118,10 @@ export class ProductServices extends Service<IProduct> {
             });
         }
     }
+    // public async getRandomProduct(){
+    //     const random=Math.floor(Math.random()*99)+1;
+    //     return this.model.findOne()
+    // }
 
 
 

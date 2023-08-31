@@ -12,6 +12,13 @@ const cartServices = new CartServices(CartModel);
 const userRouter = express.Router();
 const jsonParser = bodyParser.json();
 
+userRouter.get('/token/:token',jsonParser,(request,response)=>{
+    console.log('da');
+    userServices.findUserFromToken(request.params.token).then((data)=>{
+        response.json(data);
+    });
+});
+
 /**
  * Route to login a user
  * @body email - user email
@@ -72,5 +79,6 @@ userRouter.post('/logout', jsonParser, (request, response) => {
         response.json(data);
     });
 });
+
 
 export default userRouter;

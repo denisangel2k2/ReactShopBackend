@@ -162,5 +162,7 @@ productRouter.get('/category/:category/number', async (request, response) => {
         response.status(500).send("Internal server error");
     }
 });
+productRouter.get('/random',async (request,response)=>{
 
+});
 export default productRouter;
