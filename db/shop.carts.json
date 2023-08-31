@@ -1,0 +1,109 @@
+[{
+  "_id": {
+    "$oid": "64e47b88f2613d6077e479f9"
+  },
+  "userId": "64e47b88f2613d6077e479f7",
+  "total": 0,
+  "discountTotal": 0,
+  "totalProducts": 0,
+  "totalQuantity": 0,
+  "products": [],
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "64e602fbd255ff47340920e4"
+  },
+  "userId": "64e602fbd255ff47340920e2",
+  "total": 0,
+  "discountTotal": 0,
+  "totalProducts": 0,
+  "totalQuantity": 0,
+  "products": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e7309efd6815fc90a91958"
+  },
+  "userId": "64e7309efd6815fc90a91956",
+  "total": 0,
+  "discountTotal": 0,
+  "totalProducts": 0,
+  "totalQuantity": 0,
+  "products": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e730e2fd6815fc90a9195d"
+  },
+  "userId": "64e730e2fd6815fc90a9195b",
+  "total": 2697,
+  "discountTotal": 2271.4736,
+  "totalProducts": 3,
+  "totalQuantity": 3,
+  "products": [
+    {
+      "id": 3,
+      "title": "Samsung Universe 9",
+      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+      "price": 1249,
+      "discountedPercentage": 15.46,
+      "rating": 4.09,
+      "stock": 36,
+      "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+      "quantity": 1,
+      "total": 1249,
+      "discountedPrice": 1055.9045999999998,
+      "_id": {
+        "$oid": "64e730f4fd6815fc90a9196b"
+      }
+    },
+    {
+      "id": 2,
+      "title": "iPhone X",
+      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+      "price": 899,
+      "discountedPercentage": 17.94,
+      "rating": 4.44,
+      "stock": 34,
+      "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+      "quantity": 1,
+      "total": 899,
+      "discountedPrice": 737.7194,
+      "_id": {
+        "$oid": "64e730f6fd6815fc90a91975"
+      }
+    },
+    {
+      "id": 1,
+      "title": "iPhone 9",
+      "description": "An apple mobile which is nothing like apple",
+      "price": 549,
+      "discountedPercentage": 12.96,
+      "rating": 4.69,
+      "stock": 94,
+      "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+      "quantity": 1,
+      "total": 549,
+      "discountedPrice": 477.84959999999995,
+      "_id": {
+        "$oid": "64e730f7fd6815fc90a91981"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8968f87d05cabc8b7920d"
+  },
+  "userId": "64e8968f87d05cabc8b7920b",
+  "total": 0,
+  "discountTotal": 0,
+  "totalProducts": 0,
+  "totalQuantity": 0,
+  "products": [],
+  "__v": 0
+}]

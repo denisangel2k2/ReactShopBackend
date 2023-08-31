@@ -1,0 +1,143 @@
+[{
+  "_id": {
+    "$oid": "64ec8af8164269e1b3ad833d"
+  },
+  "productId": 1,
+  "userId": "64e47b88f2613d6077e479f9",
+  "rating": 4.5,
+  "title": "Request title",
+  "comment": "My second review!",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ede4ad4117700089352fc7"
+  },
+  "productId": 1,
+  "userId": "64e47b88f2613d6077e479f9",
+  "rating": 4.5,
+  "title": "Request title",
+  "comment": "My second review!",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ede4b04117700089352fca"
+  },
+  "productId": 1,
+  "userId": "64e47b88f2613d6077e479f9",
+  "rating": 4.5,
+  "title": "Request title",
+  "comment": "My second review!",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ede4b04117700089352fcd"
+  },
+  "productId": 1,
+  "userId": "64e47b88f2613d6077e479f9",
+  "rating": 4.5,
+  "title": "Request title",
+  "comment": "My second review!",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ede4b44117700089352fd3"
+  },
+  "productId": 1,
+  "userId": "64e47b88f2613d6077e479f9",
+  "rating": 4.5,
+  "title": "Request title",
+  "comment": "My second review!",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64edefcb67064399068f2ba6"
+  },
+  "productId": 2,
+  "userId": "64e47b88f2613d6077e479f7",
+  "rating": 3,
+  "title": "fdsfdsfdgfdg",
+  "comment": "cxxcvsadad",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64edf1e069a331feaeee510e"
+  },
+  "productId": 2,
+  "userId": "64e47b88f2613d6077e479f7",
+  "rating": 2,
+  "title": "adasd",
+  "comment": "asdasd",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64edf2ac69a331feaeee5126"
+  },
+  "productId": 2,
+  "userId": "64e47b88f2613d6077e479f7",
+  "rating": 3.2,
+  "title": "new review",
+  "comment": "dasdasdsadad",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64edf42f69a331feaeee51e2"
+  },
+  "productId": 2,
+  "userId": "64e47b88f2613d6077e479f7",
+  "rating": 1,
+  "title": "dfgdfgfdfgh",
+  "comment": "slab rau bro",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eef113cd0904365b2d8dc9"
+  },
+  "productId": 1,
+  "userId": "64e602fbd255ff47340920e2",
+  "rating": 3,
+  "title": "dsgdsdg",
+  "comment": "fdfdfgd",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eef940cd0904365b2d8f98"
+  },
+  "productId": 6,
+  "userId": "64e602fbd255ff47340920e2",
+  "rating": 5,
+  "title": "Good laptop",
+  "comment": "I like the laptop",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eefde0cd0904365b2d90f2"
+  },
+  "productId": 1,
+  "userId": "64e602fbd255ff47340920e2",
+  "rating": 5,
+  "title": "telefon bun",
+  "comment": "foarte bun telefon n am ce comenta",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ef329dcd0904365b2d923f"
+  },
+  "productId": 25,
+  "userId": "64e602fbd255ff47340920e2",
+  "rating": 2.22,
+  "title": "What is this",
+  "comment": "What is this?",
+  "__v": 0
+}]

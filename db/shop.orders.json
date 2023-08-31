@@ -1,0 +1,1168 @@
+[{
+  "_id": {
+    "$oid": "64e896ae87d05cabc8b7928e"
+  },
+  "userId": "64e8968f87d05cabc8b7920b",
+  "firstName": "denis5",
+  "lastName": "denis5",
+  "address": "adresa lui denis5",
+  "phone": "1234567890",
+  "date": "25/08/2023 14:55",
+  "cart": {
+    "total": 18273,
+    "discountTotal": 15507.3566,
+    "totalProducts": 3,
+    "totalQuantity": 27,
+    "products": [
+      {
+        "id": 1,
+        "title": "iPhone 9",
+        "description": "An apple mobile which is nothing like apple",
+        "price": 549,
+        "discountedPercentage": 12.96,
+        "rating": 4.69,
+        "stock": 94,
+        "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "quantity": 8,
+        "total": 549,
+        "discountedPrice": 477.84959999999995,
+        "_id": {
+          "$oid": "64e8969b87d05cabc8b7921c"
+        }
+      },
+      {
+        "id": 2,
+        "title": "iPhone X",
+        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+        "price": 899,
+        "discountedPercentage": 17.94,
+        "rating": 4.44,
+        "stock": 34,
+        "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+        "quantity": 11,
+        "total": 899,
+        "discountedPrice": 737.7194,
+        "_id": {
+          "$oid": "64e8969b87d05cabc8b79226"
+        }
+      },
+      {
+        "id": 5,
+        "title": "Huawei P30",
+        "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+        "price": 499,
+        "discountedPercentage": 10.58,
+        "rating": 4.09,
+        "stock": 32,
+        "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+        "quantity": 8,
+        "total": 499,
+        "discountedPrice": 446.2058,
+        "_id": {
+          "$oid": "64e8969d87d05cabc8b79232"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8978c87d05cabc8b792cd"
+  },
+  "userId": "64e8968f87d05cabc8b7920b",
+  "firstName": "denis5",
+  "lastName": "denis5",
+  "address": "adresa lui denis5 cea de a doua",
+  "phone": "1234567890",
+  "date": "25/08/2023 14:59",
+  "cart": {
+    "total": 1947,
+    "discountTotal": 1661.7748,
+    "totalProducts": 3,
+    "totalQuantity": 3,
+    "products": [
+      {
+        "id": 2,
+        "title": "iPhone X",
+        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+        "price": 899,
+        "discountedPercentage": 17.94,
+        "rating": 4.44,
+        "stock": 34,
+        "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+        "quantity": 1,
+        "total": 899,
+        "discountedPrice": 737.7194,
+        "_id": {
+          "$oid": "64e8977a87d05cabc8b792ab"
+        }
+      },
+      {
+        "id": 1,
+        "title": "iPhone 9",
+        "description": "An apple mobile which is nothing like apple",
+        "price": 549,
+        "discountedPercentage": 12.96,
+        "rating": 4.69,
+        "stock": 94,
+        "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "quantity": 1,
+        "total": 549,
+        "discountedPrice": 477.84959999999995,
+        "_id": {
+          "$oid": "64e8977b87d05cabc8b792b5"
+        }
+      },
+      {
+        "id": 5,
+        "title": "Huawei P30",
+        "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+        "price": 499,
+        "discountedPercentage": 10.58,
+        "rating": 4.09,
+        "stock": 32,
+        "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+        "quantity": 1,
+        "total": 499,
+        "discountedPrice": 446.2058,
+        "_id": {
+          "$oid": "64e8977c87d05cabc8b792c1"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e89dec4b4ae302d30a89ab"
+  },
+  "userId": "64e8968f87d05cabc8b7920b",
+  "firstName": "bvmnbmbnm",
+  "lastName": "bnmbnmbnm",
+  "address": "hgjhgjhgjhgj",
+  "phone": "1234567890",
+  "date": "25/08/2023 15:26",
+  "cart": {
+    "total": 98,
+    "discountTotal": 85.18719999999999,
+    "totalProducts": 3,
+    "totalQuantity": 3,
+    "products": [
+      {
+        "id": 25,
+        "title": "Gulab Powder 50 Gram",
+        "description": "Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
+        "price": 70,
+        "discountedPercentage": 13.58,
+        "rating": 4.87,
+        "stock": 47,
+        "thumbnail": "https://i.dummyjson.com/data/products/25/thumbnail.jpg",
+        "quantity": 1,
+        "total": 70,
+        "discountedPrice": 60.494,
+        "_id": {
+          "$oid": "64e89de44b4ae302d30a8989"
+        }
+      },
+      {
+        "id": 23,
+        "title": "Orange Essence Food Flavou",
+        "description": "Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item",
+        "price": 14,
+        "discountedPercentage": 8.04,
+        "rating": 4.85,
+        "stock": 26,
+        "thumbnail": "https://i.dummyjson.com/data/products/23/thumbnail.jpg",
+        "quantity": 1,
+        "total": 14,
+        "discountedPrice": 12.8744,
+        "_id": {
+          "$oid": "64e89de54b4ae302d30a8993"
+        }
+      },
+      {
+        "id": 22,
+        "title": "Elbow Macaroni - 400 gm",
+        "description": "Product details of Bake Parlor Big Elbow Macaroni - 400 gm",
+        "price": 14,
+        "discountedPercentage": 15.58,
+        "rating": 4.57,
+        "stock": 146,
+        "thumbnail": "https://i.dummyjson.com/data/products/22/thumbnail.jpg",
+        "quantity": 1,
+        "total": 14,
+        "discountedPrice": 11.818800000000001,
+        "_id": {
+          "$oid": "64e89de64b4ae302d30a899f"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e89e0d4b4ae302d30a8a08"
+  },
+  "userId": "64e8968f87d05cabc8b7920b",
+  "firstName": "denis5",
+  "lastName": "xcvxcv",
+  "address": "xcvxcv",
+  "phone": "1234567890",
+  "date": "25/08/2023 15:26",
+  "cart": {
+    "total": 9693,
+    "discountTotal": 8728.3316,
+    "totalProducts": 3,
+    "totalQuantity": 7,
+    "products": [
+      {
+        "id": 10,
+        "title": "HP Pavilion 15-DK1056WM",
+        "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+        "price": 1099,
+        "discountedPercentage": 6.18,
+        "rating": 4.43,
+        "stock": 89,
+        "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
+        "quantity": 1,
+        "total": 1099,
+        "discountedPrice": 1031.0818,
+        "_id": {
+          "$oid": "64e89e044b4ae302d30a89d6"
+        }
+      },
+      {
+        "id": 9,
+        "title": "Infinix INBOOK",
+        "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
+        "price": 1099,
+        "discountedPercentage": 11.83,
+        "rating": 4.54,
+        "stock": 96,
+        "thumbnail": "https://i.dummyjson.com/data/products/9/thumbnail.jpg",
+        "quantity": 1,
+        "total": 1099,
+        "discountedPrice": 968.9883000000001,
+        "_id": {
+          "$oid": "64e89e044b4ae302d30a89e0"
+        }
+      },
+      {
+        "id": 8,
+        "title": "Microsoft Surface Laptop 4",
+        "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+        "price": 1499,
+        "discountedPercentage": 10.23,
+        "rating": 4.43,
+        "stock": 68,
+        "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "quantity": 5,
+        "total": 1499,
+        "discountedPrice": 1345.6523,
+        "_id": {
+          "$oid": "64e89e054b4ae302d30a89ec"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e89eb44b4ae302d30a8a56"
+  },
+  "userId": "64e8968f87d05cabc8b7920b",
+  "firstName": "jhg",
+  "lastName": "jg",
+  "address": "bgoiflk",
+  "phone": "0987654321",
+  "date": "25/08/2023 15:29",
+  "cart": {
+    "total": 549,
+    "discountTotal": 477.84959999999995,
+    "totalProducts": 1,
+    "totalQuantity": 1,
+    "products": [
+      {
+        "id": 1,
+        "title": "iPhone 9",
+        "description": "An apple mobile which is nothing like apple",
+        "price": 549,
+        "discountedPercentage": 12.96,
+        "rating": 4.69,
+        "stock": 94,
+        "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "quantity": 1,
+        "total": 549,
+        "discountedPrice": 477.84959999999995,
+        "_id": {
+          "$oid": "64e89e9b4b4ae302d30a8a4e"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e89f104b4ae302d30a910d"
+  },
+  "userId": "64e8968f87d05cabc8b7920b",
+  "firstName": "gfds",
+  "lastName": "fds",
+  "address": "fds",
+  "phone": "1234567890",
+  "date": "25/08/2023 15:31",
+  "cart": {
+    "total": 899,
+    "discountTotal": 737.7194,
+    "totalProducts": 1,
+    "totalQuantity": 1,
+    "products": [
+      {
+        "id": 2,
+        "title": "iPhone X",
+        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+        "price": 899,
+        "discountedPercentage": 17.94,
+        "rating": 4.44,
+        "stock": 34,
+        "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+        "quantity": 1,
+        "total": 899,
+        "discountedPrice": 737.7194,
+        "_id": {
+          "$oid": "64e89f0a4b4ae302d30a9105"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e89fa34b4ae302d30a9153"
+  },
+  "userId": "64e47b88f2613d6077e479f7",
+  "firstName": "denis",
+  "lastName": "denis",
+  "address": "denis address",
+  "phone": "1234567890",
+  "date": "25/08/2023 15:33",
+  "cart": {
+    "total": 18225,
+    "discountTotal": 20811.5248,
+    "totalProducts": 7,
+    "totalQuantity": 28,
+    "products": [
+      {
+        "id": 2,
+        "title": "iPhone X",
+        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+        "price": 899,
+        "discountedPercentage": 17.94,
+        "rating": 4.44,
+        "stock": 34,
+        "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+        "quantity": 7,
+        "total": 1798,
+        "discountedPrice": 1475.4388,
+        "_id": {
+          "$oid": "64e4a314f65658717118ccea"
+        }
+      },
+      {
+        "id": 4,
+        "title": "OPPOF19",
+        "description": "OPPO F19 is officially announced on April 2021.",
+        "price": 280,
+        "discountedPercentage": 17.91,
+        "rating": 4.3,
+        "stock": 123,
+        "thumbnail": "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
+        "quantity": 3,
+        "total": 280,
+        "discountedPrice": 229.85199999999998,
+        "_id": {
+          "$oid": "64e4a557b118e0b0306371fc"
+        }
+      },
+      {
+        "id": 8,
+        "title": "Microsoft Surface Laptop 4",
+        "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+        "price": 1499,
+        "discountedPercentage": 10.23,
+        "rating": 4.43,
+        "stock": 68,
+        "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "quantity": 2,
+        "total": 1499,
+        "discountedPrice": 1345.6523,
+        "_id": {
+          "$oid": "64e4a65bb123ba13c4c249c4"
+        }
+      },
+      {
+        "id": 5,
+        "title": "Huawei P30",
+        "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+        "price": 499,
+        "discountedPercentage": 10.58,
+        "rating": 4.09,
+        "stock": 32,
+        "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+        "quantity": 7,
+        "total": 499,
+        "discountedPrice": 446.2058,
+        "_id": {
+          "$oid": "64e4a7e7b348442d38f9b6dc"
+        }
+      },
+      {
+        "id": 1,
+        "title": "iPhone 9",
+        "description": "An apple mobile which is nothing like apple",
+        "price": 549,
+        "discountedPercentage": 12.96,
+        "rating": 4.69,
+        "stock": 94,
+        "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "quantity": 6,
+        "total": 549,
+        "discountedPrice": 477.84959999999995,
+        "_id": {
+          "$oid": "64e5d8a6b66acd13c5fc31e2"
+        }
+      },
+      {
+        "id": 88,
+        "title": "TC Reusable Silicone Magic Washing Gloves",
+        "description": "TC Reusable Silicone Magic Washing Gloves with Scrubber, Cleaning Brush Scrubber Gloves Heat Resistant Pair for Cleaning of Kitchen, Dishes, Vegetables and Fruits, Bathroom, Car Wash, Pet Care and Multipurpose",
+        "price": 29,
+        "discountedPercentage": 3.19,
+        "rating": 4.98,
+        "stock": 42,
+        "thumbnail": "https://i.dummyjson.com/data/products/88/thumbnail.jpg",
+        "quantity": 2,
+        "total": 29,
+        "discountedPrice": 28.0749,
+        "_id": {
+          "$oid": "64e5ee6ab244f5b892376895"
+        }
+      },
+      {
+        "id": 3,
+        "title": "Samsung Universe 9",
+        "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+        "price": 1249,
+        "discountedPercentage": 15.46,
+        "rating": 4.09,
+        "stock": 36,
+        "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+        "quantity": 1,
+        "total": 1249,
+        "discountedPrice": 1055.9045999999998,
+        "_id": {
+          "$oid": "64e608e8d255ff473409ad0b"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e8a5154b4ae302d30a935d"
+  },
+  "userId": "64e8968f87d05cabc8b7920b",
+  "firstName": "negru",
+  "lastName": "dan",
+  "address": "dannegru residence",
+  "phone": "0987654321",
+  "date": "25/08/2023 15:56",
+  "cart": {
+    "total": 680,
+    "discountTotal": 599.4677,
+    "totalProducts": 6,
+    "totalQuantity": 15,
+    "products": [
+      {
+        "id": 54,
+        "title": "Pubg Printed Graphic T-Shirt",
+        "description": "Product Description Features: 100% Ultra soft Polyester Jersey. Vibrant & colorful printing on front. Feels soft as cotton without ever cracking",
+        "price": 46,
+        "discountedPercentage": 16.44,
+        "rating": 4.62,
+        "stock": 136,
+        "thumbnail": "https://i.dummyjson.com/data/products/54/thumbnail.jpg",
+        "quantity": 1,
+        "total": 46,
+        "discountedPrice": 38.4376,
+        "_id": {
+          "$oid": "64e8a4fc4b4ae302d30a92e9"
+        }
+      },
+      {
+        "id": 71,
+        "title": "Women Shoulder Bags",
+        "description": "LouisWill Women Shoulder Bags Long Clutches Cross Body Bags Phone Bags PU Leather Hand Bags Large Capacity Card Holders Zipper Coin Purses Fashion Crossbody Bags for Girls Ladies",
+        "price": 46,
+        "discountedPercentage": 14.65,
+        "rating": 4.71,
+        "stock": 17,
+        "thumbnail": "https://i.dummyjson.com/data/products/71/thumbnail.jpg",
+        "quantity": 1,
+        "total": 46,
+        "discountedPrice": 39.261,
+        "_id": {
+          "$oid": "64e8a5004b4ae302d30a92f6"
+        }
+      },
+      {
+        "id": 74,
+        "title": "Leather Hand Bag",
+        "description": "It features an attractive design that makes it a must have accessory in your collection. We sell different kind of bags for boys, kids, women, girls and also for unisex.",
+        "price": 57,
+        "discountedPercentage": 11.19,
+        "rating": 4.01,
+        "stock": 43,
+        "thumbnail": "https://i.dummyjson.com/data/products/74/thumbnail.jpg",
+        "quantity": 1,
+        "total": 57,
+        "discountedPrice": 50.6217,
+        "_id": {
+          "$oid": "64e8a5014b4ae302d30a9302"
+        }
+      },
+      {
+        "id": 75,
+        "title": "Seven Pocket Women Bag",
+        "description": "Seven Pocket Women Bag Handbags Lady Shoulder Crossbody Bag Female Purse Seven Pocket Bag",
+        "price": 68,
+        "discountedPercentage": 14.87,
+        "rating": 4.93,
+        "stock": 13,
+        "thumbnail": "https://i.dummyjson.com/data/products/75/thumbnail.jpg",
+        "quantity": 1,
+        "total": 68,
+        "discountedPrice": 57.8884,
+        "_id": {
+          "$oid": "64e8a5014b4ae302d30a9310"
+        }
+      },
+      {
+        "id": 73,
+        "title": "Fancy hand clutch",
+        "description": "This fashion is designed to add a charming effect to your casual outfit. This Bag is made of synthetic leather.",
+        "price": 44,
+        "discountedPercentage": 10.39,
+        "rating": 4.18,
+        "stock": 101,
+        "thumbnail": "https://i.dummyjson.com/data/products/73/thumbnail.jpg",
+        "quantity": 10,
+        "total": 44,
+        "discountedPrice": 39.4284,
+        "_id": {
+          "$oid": "64e8a5024b4ae302d30a9320"
+        }
+      },
+      {
+        "id": 72,
+        "title": "Handbag For Girls",
+        "description": "This fashion is designed to add a charming effect to your casual outfit. This Bag is made of synthetic leather.",
+        "price": 23,
+        "discountedPercentage": 17.5,
+        "rating": 4.91,
+        "stock": 27,
+        "thumbnail": "https://i.dummyjson.com/data/products/72/thumbnail.webp",
+        "quantity": 1,
+        "total": 23,
+        "discountedPrice": 18.974999999999998,
+        "_id": {
+          "$oid": "64e8a5034b4ae302d30a9332"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ec915e76477581cd1d8b5c"
+  },
+  "userId": "64e8968f87d05cabc8b7920b",
+  "firstName": "denis5",
+  "lastName": "denis5",
+  "address": "adresa lui denis5",
+  "phone": "1234567890",
+  "date": "28/08/2023 15:21",
+  "cart": {
+    "total": 4495,
+    "discountTotal": 3746.9123999999997,
+    "totalProducts": 3,
+    "totalQuantity": 5,
+    "products": [
+      {
+        "id": 1,
+        "title": "iPhone 9",
+        "description": "An apple mobile which is nothing like apple",
+        "price": 549,
+        "discountedPercentage": 12.96,
+        "rating": 4.69,
+        "stock": 94,
+        "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "quantity": 1,
+        "total": 549,
+        "discountedPrice": 477.84959999999995,
+        "_id": {
+          "$oid": "64ec914b76477581cd1d8b06"
+        }
+      },
+      {
+        "id": 2,
+        "title": "iPhone X",
+        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+        "price": 899,
+        "discountedPercentage": 17.94,
+        "rating": 4.44,
+        "stock": 34,
+        "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+        "quantity": 3,
+        "total": 899,
+        "discountedPrice": 737.7194,
+        "_id": {
+          "$oid": "64ec914d76477581cd1d8b10"
+        }
+      },
+      {
+        "id": 3,
+        "title": "Samsung Universe 9",
+        "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+        "price": 1249,
+        "discountedPercentage": 15.46,
+        "rating": 4.09,
+        "stock": 36,
+        "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+        "quantity": 1,
+        "total": 1249,
+        "discountedPrice": 1055.9045999999998,
+        "_id": {
+          "$oid": "64ec914e76477581cd1d8b1c"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ec921aa5c0af3d4e2abd84"
+  },
+  "userId": "64e8968f87d05cabc8b7920b",
+  "firstName": "cxvxcvx",
+  "lastName": "vxcvxcv",
+  "address": "adresa lui denis5",
+  "phone": "1234567890",
+  "date": "28/08/2023 15:24",
+  "cart": {
+    "total": 3946,
+    "discountTotal": 3327.3781999999997,
+    "totalProducts": 3,
+    "totalQuantity": 4,
+    "products": [
+      {
+        "id": 1,
+        "title": "iPhone 9",
+        "description": "An apple mobile which is nothing like apple",
+        "price": 549,
+        "discountedPercentage": 12.96,
+        "rating": 4.69,
+        "stock": 94,
+        "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "quantity": 1,
+        "total": 549,
+        "discountedPrice": 477.84959999999995,
+        "_id": {
+          "$oid": "64ec920aa5c0af3d4e2abcc2"
+        }
+      },
+      {
+        "id": 2,
+        "title": "iPhone X",
+        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+        "price": 899,
+        "discountedPercentage": 17.94,
+        "rating": 4.44,
+        "stock": 34,
+        "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+        "quantity": 1,
+        "total": 899,
+        "discountedPrice": 737.7194,
+        "_id": {
+          "$oid": "64ec920ca5c0af3d4e2abccc"
+        }
+      },
+      {
+        "id": 3,
+        "title": "Samsung Universe 9",
+        "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+        "price": 1249,
+        "discountedPercentage": 15.46,
+        "rating": 4.09,
+        "stock": 36,
+        "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+        "quantity": 2,
+        "total": 1249,
+        "discountedPrice": 1055.9045999999998,
+        "_id": {
+          "$oid": "64ec920ca5c0af3d4e2abcd8"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ec93f85f00f596d24dc2df"
+  },
+  "userId": "64e8968f87d05cabc8b7920b",
+  "firstName": "jhg",
+  "lastName": "dfgdfgdfg",
+  "address": "adresa lui denis5 cea de a doua",
+  "phone": "1234567890",
+  "date": "28/08/2023 15:32",
+  "cart": {
+    "total": 4392,
+    "discountTotal": 3861.16,
+    "totalProducts": 2,
+    "totalQuantity": 8,
+    "products": [
+      {
+        "id": 2,
+        "title": "iPhone X",
+        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+        "price": 899,
+        "discountedPercentage": 17.94,
+        "rating": 4.44,
+        "stock": 34,
+        "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+        "quantity": 1,
+        "total": 899,
+        "discountedPrice": 737.7194,
+        "_id": {
+          "$oid": "64ec9379d933df0ffdee6320"
+        }
+      },
+      {
+        "id": 5,
+        "title": "Huawei P30",
+        "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+        "price": 499,
+        "discountedPercentage": 10.58,
+        "rating": 4.09,
+        "stock": 32,
+        "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+        "quantity": 7,
+        "total": 499,
+        "discountedPrice": 446.2058,
+        "_id": {
+          "$oid": "64ec937ad933df0ffdee632a"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ec96f578ff8ad4da2e8480"
+  },
+  "userId": "64e602fbd255ff47340920e2",
+  "firstName": "denis2",
+  "lastName": "denis2",
+  "address": "adresa lui denis2",
+  "phone": "1234567890",
+  "date": "28/08/2023 15:45",
+  "cart": {
+    "total": 5997,
+    "discountTotal": 5132.2224,
+    "totalProducts": 9,
+    "totalQuantity": 20,
+    "products": [
+      {
+        "id": 1,
+        "title": "iPhone 9",
+        "description": "An apple mobile which is nothing like apple",
+        "price": 549,
+        "discountedPercentage": 12.96,
+        "rating": 4.69,
+        "stock": 94,
+        "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "quantity": 7,
+        "total": 549,
+        "discountedPrice": 477.84959999999995,
+        "_id": {
+          "$oid": "64e6032fd255ff47340920f3"
+        }
+      },
+      {
+        "id": 25,
+        "title": "Gulab Powder 50 Gram",
+        "description": "Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
+        "price": 70,
+        "discountedPercentage": 13.58,
+        "rating": 4.87,
+        "stock": 47,
+        "thumbnail": "https://i.dummyjson.com/data/products/25/thumbnail.jpg",
+        "quantity": 1,
+        "total": 70,
+        "discountedPrice": 60.494,
+        "_id": {
+          "$oid": "64e7205afd6815fc90a9162b"
+        }
+      },
+      {
+        "id": 24,
+        "title": "cereals muesli fruit nuts",
+        "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+        "price": 46,
+        "discountedPercentage": 16.8,
+        "rating": 4.94,
+        "stock": 113,
+        "thumbnail": "https://i.dummyjson.com/data/products/24/thumbnail.jpg",
+        "quantity": 1,
+        "total": 46,
+        "discountedPrice": 38.272,
+        "_id": {
+          "$oid": "64e7205afd6815fc90a91637"
+        }
+      },
+      {
+        "id": 22,
+        "title": "Elbow Macaroni - 400 gm",
+        "description": "Product details of Bake Parlor Big Elbow Macaroni - 400 gm",
+        "price": 14,
+        "discountedPercentage": 15.58,
+        "rating": 4.57,
+        "stock": 146,
+        "thumbnail": "https://i.dummyjson.com/data/products/22/thumbnail.jpg",
+        "quantity": 1,
+        "total": 14,
+        "discountedPrice": 11.818800000000001,
+        "_id": {
+          "$oid": "64e7205bfd6815fc90a91645"
+        }
+      },
+      {
+        "id": 21,
+        "title": "- Daal Masoor 500 grams",
+        "description": "Fine quality Branded Product Keep in a cool and dry place",
+        "price": 20,
+        "discountedPercentage": 4.81,
+        "rating": 4.44,
+        "stock": 133,
+        "thumbnail": "https://i.dummyjson.com/data/products/21/thumbnail.png",
+        "quantity": 1,
+        "total": 20,
+        "discountedPrice": 19.038,
+        "_id": {
+          "$oid": "64e7205cfd6815fc90a91655"
+        }
+      },
+      {
+        "id": 23,
+        "title": "Orange Essence Food Flavou",
+        "description": "Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item",
+        "price": 14,
+        "discountedPercentage": 8.04,
+        "rating": 4.85,
+        "stock": 26,
+        "thumbnail": "https://i.dummyjson.com/data/products/23/thumbnail.jpg",
+        "quantity": 4,
+        "total": 14,
+        "discountedPrice": 12.8744,
+        "_id": {
+          "$oid": "64e7205cfd6815fc90a91667"
+        }
+      },
+      {
+        "id": 29,
+        "title": "Handcraft Chinese style",
+        "description": "Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
+        "price": 60,
+        "discountedPercentage": 15.34,
+        "rating": 4.44,
+        "stock": 7,
+        "thumbnail": "https://i.dummyjson.com/data/products/29/thumbnail.webp",
+        "quantity": 2,
+        "total": 60,
+        "discountedPrice": 50.796,
+        "_id": {
+          "$oid": "64e72060fd6815fc90a9167c"
+        }
+      },
+      {
+        "id": 30,
+        "title": "Key Holder",
+        "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
+        "price": 30,
+        "discountedPercentage": 2.92,
+        "rating": 4.92,
+        "stock": 54,
+        "thumbnail": "https://i.dummyjson.com/data/products/30/thumbnail.jpg",
+        "quantity": 1,
+        "total": 30,
+        "discountedPrice": 29.124,
+        "_id": {
+          "$oid": "64e72060fd6815fc90a91692"
+        }
+      },
+      {
+        "id": 2,
+        "title": "iPhone X",
+        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+        "price": 899,
+        "discountedPercentage": 17.94,
+        "rating": 4.44,
+        "stock": 34,
+        "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+        "quantity": 2,
+        "total": 899,
+        "discountedPrice": 737.7194,
+        "_id": {
+          "$oid": "64e85cc83e104488da2cba1d"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ec9ccdc51120d20dbea3ef"
+  },
+  "userId": "64e47b88f2613d6077e479f7",
+  "firstName": "jhg",
+  "lastName": "fghfgh",
+  "address": "adresa lui denis5",
+  "phone": "1234567890",
+  "date": "28/08/2023 16:10",
+  "cart": {
+    "total": 5775,
+    "discountTotal": 4892.8261999999995,
+    "totalProducts": 4,
+    "totalQuantity": 11,
+    "products": [
+      {
+        "id": 1,
+        "title": "iPhone 9",
+        "description": "An apple mobile which is nothing like apple",
+        "price": 549,
+        "discountedPercentage": 12.96,
+        "rating": 4.69,
+        "stock": 94,
+        "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        "quantity": 2,
+        "total": 549,
+        "discountedPrice": 477.84959999999995,
+        "_id": {
+          "$oid": "64ec9a3678ff8ad4da2e84c3"
+        }
+      },
+      {
+        "id": 3,
+        "title": "Samsung Universe 9",
+        "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+        "price": 1249,
+        "discountedPercentage": 15.46,
+        "rating": 4.09,
+        "stock": 36,
+        "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+        "quantity": 2,
+        "total": 1249,
+        "discountedPrice": 1055.9045999999998,
+        "_id": {
+          "$oid": "64ec9a4878ff8ad4da2e84cd"
+        }
+      },
+      {
+        "id": 5,
+        "title": "Huawei P30",
+        "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+        "price": 499,
+        "discountedPercentage": 10.58,
+        "rating": 4.09,
+        "stock": 32,
+        "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+        "quantity": 1,
+        "total": 499,
+        "discountedPrice": 446.2058,
+        "_id": {
+          "$oid": "64ec9a4e78ff8ad4da2e84d9"
+        }
+      },
+      {
+        "id": 4,
+        "title": "OPPOF19",
+        "description": "OPPO F19 is officially announced on April 2021.",
+        "price": 280,
+        "discountedPercentage": 17.91,
+        "rating": 4.3,
+        "stock": 123,
+        "thumbnail": "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
+        "quantity": 6,
+        "total": 280,
+        "discountedPrice": 229.85199999999998,
+        "_id": {
+          "$oid": "64ec9a4f78ff8ad4da2e84e7"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64edf40669a331feaeee51af"
+  },
+  "userId": "64e47b88f2613d6077e479f7",
+  "firstName": "hgjhgjhg",
+  "lastName": "jghjhgj",
+  "address": "ghjgghj",
+  "phone": "1234567890",
+  "date": "29/08/2023 16:35",
+  "cart": {
+    "total": 2847,
+    "discountTotal": 2533.1921999999995,
+    "totalProducts": 3,
+    "totalQuantity": 3,
+    "products": [
+      {
+        "id": 3,
+        "title": "Samsung Universe 9",
+        "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+        "price": 1249,
+        "discountedPercentage": 15.46,
+        "rating": 4.09,
+        "stock": 36,
+        "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+        "quantity": 1,
+        "total": 1249,
+        "discountedPrice": 1055.9045999999998,
+        "_id": {
+          "$oid": "64edf3fc69a331feaeee518b"
+        }
+      },
+      {
+        "id": 5,
+        "title": "Huawei P30",
+        "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+        "price": 499,
+        "discountedPercentage": 10.58,
+        "rating": 4.09,
+        "stock": 32,
+        "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+        "quantity": 1,
+        "total": 499,
+        "discountedPrice": 446.2058,
+        "_id": {
+          "$oid": "64edf3fd69a331feaeee5195"
+        }
+      },
+      {
+        "id": 10,
+        "title": "HP Pavilion 15-DK1056WM",
+        "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+        "price": 1099,
+        "discountedPercentage": 6.18,
+        "rating": 4.43,
+        "stock": 89,
+        "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
+        "quantity": 1,
+        "total": 1099,
+        "discountedPrice": 1031.0818,
+        "_id": {
+          "$oid": "64edf40069a331feaeee51a3"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eef67dcd0904365b2d8f29"
+  },
+  "userId": "64e602fbd255ff47340920e2",
+  "firstName": "denis5",
+  "lastName": "bnmbnmbnm",
+  "address": "adresa lui denis5",
+  "phone": "1234567890",
+  "date": "30/08/2023 10:57",
+  "cart": {
+    "total": 495,
+    "discountTotal": 407.13750000000005,
+    "totalProducts": 1,
+    "totalQuantity": 11,
+    "products": [
+      {
+        "id": 80,
+        "title": "Chain Pin Tassel Earrings",
+        "description": "Pair Of Ear Cuff Butterfly Long Chain Pin Tassel Earrings - Silver ( Long Life Quality Product)",
+        "price": 45,
+        "discountedPercentage": 17.75,
+        "rating": 4.59,
+        "stock": 9,
+        "thumbnail": "https://i.dummyjson.com/data/products/80/thumbnail.jpg",
+        "quantity": 11,
+        "total": 45,
+        "discountedPrice": 37.0125,
+        "_id": {
+          "$oid": "64eef60ecd0904365b2d8f0d"
+        }
+      }
+    ]
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64eefd90cd0904365b2d90c9"
+  },
+  "userId": "64e602fbd255ff47340920e2",
+  "firstName": "fjlfghlnflh",
+  "lastName": "glnlfnhfn",
+  "address": "adresa lui denis5",
+  "phone": "1234567890",
+  "date": "30/08/2023 11:28",
+  "cart": {
+    "total": 2697,
+    "discountTotal": 2213.1582,
+    "totalProducts": 1,
+    "totalQuantity": 3,
+    "products": [
+      {
+        "id": 2,
+        "title": "iPhone X",
+        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+        "price": 899,
+        "discountedPercentage": 17.94,
+        "rating": 4.44,
+        "stock": 34,
+        "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+        "quantity": 3,
+        "total": 899,
+        "discountedPrice": 737.7194,
+        "_id": {
+          "$oid": "64eefa6bcd0904365b2d8fef"
+        }
+      }
+    ]
+  },
+  "__v": 0
+}]
